@@ -1,34 +1,91 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![image](https://user-images.githubusercontent.com/40845824/121069742-3accdb00-c7a4-11eb-87d0-3dc47e433762.png)
 
-## Getting Started
+ <h1 align="center">🚀 Front end challenge 🚀</p>
 
-First, run the development server:
+# 🧠 Contexto
+
+Bem-vindo(a). Este é o desafio Front end!
+
+O objetivo deste desafio é avaliar suas habilidades de programação.
+Quando sua solução estiver pronta, basta responder o e-mail que recebeu com o link do seu repo aqui no Github!
+Em seguida, enviaremos o feedback e as instruções dos próximos passos!
+
+Caso tenha alguma dúvida, nós estamos disponíveis no email *recrutamento@rocketseat.com.br*
+Bom desafio!
+
+> ⚠️ **É importante que o seu repo esteja público, caso contrário não iremos conseguir avaliar sua resposta**
+
+O desafio será implementar um e-commerce para venda de canecas e camisetas que deverá ter as seguintes funcionalidades:
+
+- [x] Catálogo de produtos com paginação
+- [x] Filtragem produtos por categoria
+- [x] Busca por nome do produto
+- [x] Adicionar e remover produtos do carrinho
+- [x] Finalizar compra
+
+#
+
+# 🏁 Resultado
+
+![Aplicação](public/app.gif)
+
+## ⚙️ Instalação
+
+Para inicializar o projeto localmente siga os passos descritos abaixo:
 
 ```bash
-npm run dev
-# or
-yarn dev
+# Clone o repositório
+$ git clone https://github.com/Ricmaloy/capputeeno.git
+
+# Entre no repositório
+$ cd capputeeno
+
+# Instale as dependências
+$ yarn install
+
+# Execute a aplicação
+$ yarn start
+
+# Crie um arquivo .env.local e cole a linha abaixo
+$ NEXT_PUBLIC_API_URL=http://localhost:3333/
+
+# Abra outro terminal e acesse a pasta api
+$ cd capputeeno/api
+
+# Inicie a API GraphQL da pasta api
+$ yarn start
+
+# Acesse a aplicação através da url abaixo
+$ http://localhost:3000
+
+# Caso queira abrir o Playground da API GraphQL acesse a url abaixo
+$ http://localhost:3333
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 💻 Aplicação
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+A aplicação está hospedada na [Vercel](https://vercel.com/) e para acessar basta clicar [aqui](https://capputeeno-ricmaloy.vercel.app/).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 📚 Bibliotecas utilizadas
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Algumas bibliotecas foram utilizadas a fim de aprimorar a performance e usabilidade, todas elas estão listadas abaixo:
 
-## Learn More
+- [Axios](https://www.npmjs.com/package/axios)
+- [GraphQL Request](https://www.npmjs.com/package/graphql-request)
+- [Nookies](https://www.npmjs.com/package/nookies)
+- [React Content Loader](https://www.npmjs.com/package/react-content-loader)
+- [React DOM Confetti](https://www.npmjs.com/package/react-dom-confetti)
+- [React Icons](https://www.npmjs.com/package/react-icons)
+- [React Modal](https://www.npmjs.com/package/react-modal)
+- [React Query](https://www.npmjs.com/package/react-query)
+- [React Toastify](https://www.npmjs.com/package/react-toastify)
 
-To learn more about Next.js, take a look at the following resources:
+## 🍻 Contato
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Qualquer dúvida ou feedback estarei disponível em qualquer uma das redes sociais abaixo:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<a href = "mailto: ricardozamboni021@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23EA4335?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" margin-right="10px"></a>
+<a href="https://www.linkedin.com/in/ricardo-zamboni-3906471b3/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+<a href="https://github.com/Ricmaloy" target="_blank"><img src="https://github.com/Alexandrehideki13/Alexandrehideki13/blob/main/GistGithub.jpeg" height=29 target="_blank"></a>
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p align="center">🚀 Never Stop Learning 🚀</p>
