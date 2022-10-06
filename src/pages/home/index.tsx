@@ -1,43 +1,23 @@
 import { NextPage } from "next";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import Image from "next/image";
-
-const GET_LOCATIONS = gql`
-  query (
-    $page: Int
-    $perPage: Int
-    $sortFilter: ProductFilter
-    $sortOrder: String
-    $sortField: String
-  ) {
-    allProducts(
-      page: 2
-      perPage: 20
-      sortOrder: $sortOrder
-      sortField: $sortField
-      filter: $sortFilter
-    ) {
-      id
-      name
-      imageUrl: image_url
-      priceInCents: price_in_cents
-      category
-    }
-    _allProductsMeta(perPage: $perPage, page: $page, filter: $sortFilter) {
-      count
-    }
-  }
-`;
+import { GET_PRODUCTS } from "../../graphql/queries/getProducts";
 
 const Home: NextPage = () => {
-  const { loading, error, data } = useQuery(GET_LOCATIONS);
+  const { loading, error, data } = useQuery(GET_PRODUCTS, {
+    variables: {
+      page: 1,
+      perPage: 12,
+      // sortOrder: "t-shirts",
+      // sortField: "t-shirt",
+      // filter: "t-shirts",
+    },
+  });
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  console.log(data?.allProducts);
-
-  //   return <>Home</>;
+  console.log(data);
 
   return data?.allProducts.map(
     ({
@@ -53,6 +33,7 @@ const Home: NextPage = () => {
     }) => (
       <div key={id}>
         <h3>{name}</h3>
+        <h3>{id}</h3>
         <Image
           width="400"
           height="250"

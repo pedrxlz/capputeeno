@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     loader: "imgix",
-    path: "",
+    path: "https:/storage.googleapis.com/xesque-dev/challenge-images/",
   },
 };
 

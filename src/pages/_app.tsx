@@ -1,6 +1,9 @@
 import type { AppProps } from "next/app";
+import { ChakraProvider, ThemeProvider } from "@chakra-ui/react";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import Home from "./home";
+import { Header } from "../components/Header";
+import { themeDark, themeLight } from "../style/theme";
 
 const client = new ApolloClient({
   uri: "http://localhost:3333/",
@@ -10,7 +13,10 @@ const client = new ApolloClient({
 function MyApp({ pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
-      <Home {...pageProps} />
+      <ChakraProvider>
+        <Header />
+        <Home {...pageProps} />
+      </ChakraProvider>
     </ApolloProvider>
   );
 }
